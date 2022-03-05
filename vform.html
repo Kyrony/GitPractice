@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <form>
+            <div class="">
+                Serial Number:
+                <input v-model="serial" placeholder="Serial #">
+                <br>
+                Plant Species:
+                <input v-model="species" placeholder="Plant Species">
+                <br>
+                Plant Group:
+                <input v-model="group" placeholder="Plant Group">
+            </div>    
+            
+            <div id=''>
+                Type: 
+                <input type="radio" id="control" value="Control" v-model="type">
+                <label for="control">Control</label>
+                <input type="radio" id="data" value="Data" v-model="type">
+                <label for="data">Data</label>
+                <input type="radio" id="ai-grown" value="AI-Grown" v-model="type">
+                <label for="ai-grown">AI-Grown</label>
+                <input type="radio" id="none" value="None" v-model="type">
+                <label for="none">None</label>
+                <br>
+            </div>
+
+            <div id=''>
+                Moisture: 
+                <input type="radio" id="level 1" value="level 1" v-model="moisture">
+                <label for="level 1">level 1</label>
+                <input type="radio" id="level 2" value="level 2" v-model="moisture">
+                <label for="level 2">level 2</label>
+                <input type="radio" id="level 3" value="level 3" v-model="moisture">
+                <label for="level 3">level 3</label>
+                <input type="radio" id="level 4" value="level 4" v-model="moisture">
+                <label for="level 4">level 4</label>
+                <br>
+            </div>
+
+            <div id=''>
+                PH: 
+                <input type="radio" id="level 1" value="level 1" v-model="PH">
+                <label for="level 1">level 1</label>
+                <input type="radio" id="level 2" value="level 2" v-model="PH">
+                <label for="level 2">level 2</label>
+                <input type="radio" id="level 3" value="level 3" v-model="PH">
+                <label for="level 3">level 3</label>
+                <input type="radio" id="level 4" value="level 4" v-model="PH">
+                <label for="level 4">level 4</label>
+                <br>
+            </div>
+
+            <div id=''>
+                Temperature: 
+                <input type="radio" id="level 1" value="level 1" v-model="temperature">
+                <label for="level 1">level 1</label>
+                <input type="radio" id="level 2" value="level 2" v-model="temperature">
+                <label for="level 2">level 2</label>
+                <input type="radio" id="level 3" value="level 3" v-model="temperature">
+                <label for="level 3">level 3</label>
+                <input type="radio" id="level 4" value="level 4" v-model="temperature">
+                <label for="level 4">level 4</label>
+                <br>
+            </div>
+        
+        </form>
+
+        <div class="container2" id=''>
+            <p id="right-align">Serial Number: <br>
+                Plant Species: <br>
+                Plant Group: <br>
+                Type: <br>
+                Moisture: <br>
+                PH: <br>
+                Temperature: <br>
+            </p>
+            <p>{{ serial }} <br>
+                {{ species }} <br>
+                {{ group }} <br>
+                {{ type }} <br>
+                {{ moisture }} <br>
+                {{ PH }} <br>
+                {{ temperature }} <br>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="index.js"></script>    
+        </body>
+</html>
